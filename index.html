@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin/JS &lsquo;Hello, World&rsquo; with DCE</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            'prototype-kotlin-js': './build/bundle'
+        }
+    });
+
+    require(['prototype-kotlin-js'], function (api) {
+        api.embed()
+
+    });
+</script>
+</body>
+</html>
